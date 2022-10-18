@@ -55,6 +55,9 @@
         #region{
             display: none;
         }
+        button{
+            margin: 10px;
+        }
     
     
     </style>
@@ -81,15 +84,15 @@
     <div class="column1">
     <?php // cacher et montre les formulaires d insertion et modification avec la partie de 25%?>
         <ul>
-            <li><button type="button" 
+            <li><button type="button" class="btn btn-primary"
             onclick="document.getElementById('nouvelPP').style.display='block';
             document.getElementById('modify').style.display='none';document.getElementById('delet').style.display='none';">Nouveau</button></li>
-            <li><button type="button" 
+            <li><button type="button" class="btn btn-primary"
             onclick="document.getElementById('modify').style.display='block';
-            document.getElementById('nouvelPP').style.display='none';document.getElementById('delet').style.display='none';"> Modifier Produit</button></li>
-            <li><button type="button" onclick="document.getElementById('delet').style.display='block';
-            document.getElementById('nouvelPP').style.display='none';document.getElementById('modify').style.display='none';"> Supprimer Produit</button></li>
-            
+            document.getElementById('nouvelPP').style.display='none';document.getElementById('delet').style.display='none';"> Modifier client</button></li>
+            <li><button type="button" class="btn btn-primary" onclick="document.getElementById('delet').style.display='block'; 
+            document.getElementById('nouvelPP').style.display='none';document.getElementById('modify').style.display='none';"> Supprimer client</button></li>
+            <li><a href="PaiementContrat.php"><button class="btn btn-primary">Paiement contrat</button></a></li>
         </ul>
         <p id="region">
             <?php 
