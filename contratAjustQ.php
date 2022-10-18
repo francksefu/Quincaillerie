@@ -21,7 +21,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="venteQ.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="venteQ.css" media="screen" type="text/css"/>
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap-grid.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap-grid.min.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap-reboot.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap-reboot.min.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css" media="screen" type="text/css" />
+    <script src="bootstrap-4.0.0-dist/js/bootstrap.bundle.js"></script>
+    <script src="bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap-4.0.0-dist/js/bootstrap.bundle.js"></script>
+    <script src="bootstrap-4.0.0-dist/js/bootstrap.js"></script>
+    <script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    
     <style>
         html{
             background: url(imageVend.png);
@@ -248,7 +260,7 @@
         <h1 style="text-shadow: 3px 3px 5px white;color: #fff;">Controle et gestion d' entreprise</h1>
 </div>
 <div class="topnav">
-<a href="">Accueil</a>
+<a href="accueilEntreprise.php">Accueil</a>
     <a href="produitQ.php" >Produit</a>
     <a href="bonusPerte.php">Bonus et Perte</a>
     <a href="sortieQ.php">Sorties</a>

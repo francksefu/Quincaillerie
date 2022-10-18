@@ -148,13 +148,13 @@
     <a href="contratQ.php" style="background-color:#fff; color:black; border-radius:50%;" >Contrat</a>
   
 </div>
-<div class="column1">
+<div class="column1" style="float:left;">
     <button class="btn btn-primary" type="button"  id="but" style="border-radius:20px;">Calul facture</button><br><br><span>Total facture :</span><br><br><br><b style = "color:#fff">PVT</b> :
     <span id="voyons"></span><span> USD</span><br><br><br><span id="conversion"></span><span> Fc</span><br><br><br><b style = "color:#fff">PAT</b>:
     <span id="voyonsA"></span><span> USD</span><br><br><br><span id="conversionA"></span><span> Fc</span>
 </div>
-    <p style="color:#fff">Choisissez les produits achetes : </p><br>
-    <div class="column2">
+        <p style="color:#fff">Choisissez les produits achetes : </p><br>
+        <div>
     
         <form id="form1" method="POST" action="<?php  echo htmlspecialchars("ficheContratQ.php"); ?>">
         <input type="date" class="form-control"  name="DatesCon" id="datesContrat" value="<?php $d = strtotime("today"); echo date('Y-m-d',$d); ?>"><br>
@@ -168,7 +168,7 @@
                 ?>
             </datalist>
             
-            
+        </div>        
             <div class="column2">
             <br><label for="nom">factures :</label><br>
 
@@ -912,5 +912,6 @@
         }
         
     </script>
+    
 </body>
 </html>

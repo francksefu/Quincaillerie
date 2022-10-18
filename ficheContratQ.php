@@ -24,6 +24,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>francksfApp</title>
     <link rel="stylesheet" href="formulaire.css" media = "screen" type="text/css"/>
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap-grid.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap-grid.min.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap-reboot.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap-reboot.min.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css" media="screen" type="text/css" />
+    <script src="bootstrap-4.0.0-dist/js/bootstrap.bundle.js"></script>
+    <script src="bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap-4.0.0-dist/js/bootstrap.bundle.js"></script>
+    <script src="bootstrap-4.0.0-dist/js/bootstrap.js"></script>
+    <script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    
     <style>
         input[type=submit]{
             width: 30%;
@@ -39,28 +51,9 @@
         input[type = submit]:hover{
             background-color: yellowgreen;
         }
-        a{
-            display: block;
-            color: #fff;
-            padding: 14px 8px;
-            text-decoration: none;
-            width: 30%;
-            border: none;
-            border-radius: 6px;
-            font-size: 20px;
-            border-radius: 20px;
-            background-color: #555;
-            margin-left: 65%;
-            margin-top: 5%;
-            text-align: center;
-
-        }
-        a:hover{
-            background-color: yellowgreen;
-            color: white;
-            border-radius: 20px;
-        }
-        p{
+        
+        
+        .anc p{
             font-size: 20px;
             border: 1px solid black;
             border-radius: 20px;
@@ -69,8 +62,9 @@
             margin: 30px;
             background-color: #fff;
         }
-        html{
-            background: url(imageVend.png);
+        
+        body{
+            background: url(albin.JPG);
             background-size: cover;
         }
         tr{
@@ -79,9 +73,44 @@
         span{
             color: goldenrod;
         }
+        .topnav{
+    overflow: hidden;
+    background-color: #333;
+}
+button{
+    width: 30%;
+    margin: 10px;
+}
+
+.region{
+    height: 20px;
+
+}
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 50%;
+}
     </style>
 </head>
 <body>
+<div  class="header" style="background-color: transparent;">
+        <h1 style="text-shadow: 3px 3px 5px white;color: #fff;">Controle et gestion d' entreprise</h1>
+</div>
+<div class="topnav">
+    <a href="accueilEntreprise.php">Accueil</a>
+    <a href="produitQ.php" >Produit</a>
+    <a href="bonusPerte.php">Bonus et Perte</a>
+    <a href="sortieQ.php">Sorties</a>
+    <a href="ventesQ.php" style="background-color:#fff; color:black; border-radius:50%;">Ventes</a>
+    <a href="clientQ.php">Client</a>
+    <a href="paiementQ.php">Paiements</a>
+    <a href="detteEntrepriseQ.php">Dette Entreprise</a>
+    <a href="etatsQ.php" >Les Etats</a>
+    <a href="resumeQ.php" >Resume</a>
+    <a href="contratQ.php" >Contrat</a>
+  
+</div>
     <div style="border:0px solid black;"><!--  Debut requette pour l affichage de la facture -->
     <?php
     //Nous commencons le processus de fabrication d un contrat
@@ -216,9 +245,9 @@
                         }
                     }
             }
-            echo"<p style = 'width : 70%'><b>Total </b>:<br> Prix d achat total : <span>".$paTT." USD </span> ; Prix de vente total : <span>".$pvTT." USD</span>; ce qui nous fait un benefice de : ".$pvTT - $paTT." USD<br>";
-            echo"<b>Produit acheté chez moi </b>:<br> Prix d achat total : <span>".$paCM." USD  </span>; Prix de vente total : <span>".$pvCM." USD</span>; ce qui nous fait un benefice de : ".$pvCM - $paCM." USD<br>";
-            echo"<b>Produit acheté ailleur </b>:<br> Prix d achat total : <span>".$paCA." USD  </span>; Prix de vente total : <span>".$pvCA." USD</span>; ce qui nous fait un benefice de : ".$pvCA - $paCA." USD<br></p>";
+            echo"<div style = 'width : 70%' class='footer'><b>Total </b>:<br> Prix d achat total : <b>".$paTT." USD </b> ; Prix de vente total : <b>".$pvTT." USD</b>; ce qui nous fait un benefice de :<b> ".$pvTT - $paTT." USD</b><br>";
+            echo"<b>Produit acheté chez moi </b>:<br> Prix d achat total : <b>".$paCM." USD  </b>; Prix de vente total : <b>".$pvCM." USD</b>; ce qui nous fait un benefice de :<b> ".$pvCM - $paCM." USD</b><br>";
+            echo"<b>Produit acheté ailleur </b>:<br> Prix d achat total : <b>".$paCA." USD  </b>; Prix de vente total : <b>".$pvCA." USD</b>; ce qui nous fait un benefice de :<b> <b>".$pvCA - $paCA." USD</b><br></div>";
         }else{echo "Une erreur s est produite ";}
 
         $reqSql= ("SELECT *FROM Contrat WHERE (idClient = ".$tabC[0].") GROUP BY Operation order by Operation DESC limit 500");
@@ -380,11 +409,16 @@
             <input type="hidden" name="prixA20" value="<?php echo $prixAU20; ?>">
             <input type="hidden" name="source20" value="<?php echo $source20; ?>">
 
+            <a href="contratQ.php" ><button class="btn btn-primary" style="margin-left: 60%;">Nouvelle action dans un contrat</button> </a>
+   
             <input type="submit" style="margin-left: 65%;" value="Modifier la derniere action">
         </form>
-        <a href="contratQ.php" style="text-decoration: none;color:#fff;">Nouvelle action dans un contrat</a>
-    </div>
+         </div>
     
   <?php } ?>  
+  <div class="footer">
+        <h2>Copyrigth</h2>
+        <p>franck sefu +243 973359746</p>
+</div>
 </body>
 </html>
