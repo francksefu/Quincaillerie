@@ -272,7 +272,7 @@
                 }else{echo "Une erreur s est produite ";}
 
             ?> 
-            
+           
         
         </div>
             
@@ -284,7 +284,7 @@
 
 
 <div class="footer">
-        <h2>Copyrigth</h2>
+        <h2>&copy; Copyrigth</h2>
         <p>franck sefu +243 973359746</p>
 </div>
 <script>
