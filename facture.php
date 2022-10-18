@@ -299,10 +299,10 @@
             <input type="hidden" name="idProduit20" value="<?php echo $idproduit20; ?>">
             <input type="hidden" name="quantite20" value="<?php echo $quantite20; ?>">
             <input type="hidden" name="prixU20" value="<?php echo $prixU20; ?>">
-
+            <a href="ventesQ.php" style="text-decoration: none;color:#fff;">Nouvelle Vente</a>
             <input type="submit" style="margin-left: 65%;" value="Modifier facture">
         </form>
-        <a href="ventesQ.php" style="text-decoration: none;color:#fff;">Nouvelle Vente</a>
+        
     </div>
     <?php } ?>
 </body>
