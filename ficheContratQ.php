@@ -102,13 +102,13 @@ button{
     <a href="produitQ.php" >Produit</a>
     <a href="bonusPerte.php">Bonus et Perte</a>
     <a href="sortieQ.php">Sorties</a>
-    <a href="ventesQ.php" style="background-color:#fff; color:black; border-radius:50%;">Ventes</a>
+    <a href="ventesQ.php" >Ventes</a>
     <a href="clientQ.php">Client</a>
     <a href="paiementQ.php">Paiements</a>
     <a href="detteEntrepriseQ.php">Dette Entreprise</a>
     <a href="etatsQ.php" >Les Etats</a>
     <a href="resumeQ.php" >Resume</a>
-    <a href="contratQ.php" >Contrat</a>
+    <a href="contratQ.php" style="background-color:#fff; color:black; border-radius:50%;">Contrat</a>
   
 </div>
     <div style="border:0px solid black;"><!--  Debut requette pour l affichage de la facture -->
