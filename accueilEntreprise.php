@@ -65,7 +65,7 @@
             <a href="ventesQ.php"  >ventes</a>
             <a href="clientQ.php"  >Client</a>
             <a href="contratQ.php"  >contrat</a>
-            <a href="detteEntrepriseQ.php" >Dette Entreprise</a>
+            
             <a href="etatsQ.php"  >Les Etats</a>
             
             </form>
