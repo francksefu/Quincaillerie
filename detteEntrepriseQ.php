@@ -347,9 +347,9 @@
                 $reqSql= ("SELECT idDette,TypeD, ValeurDette, MontantPaye, Reste,il_pris_quoi, DatesD,DatesRNew  FROM DetteEntreprise order by DatesD desc limit 500 ");
                 $result= mysqli_query($db, $reqSql);
                 if(mysqli_num_rows($result)>0){
-                    echo"<table id='Customers'><tr><th>identifiant</th><th>Type </th><th>Valeur Dette</th><th>Montant PayE</th><th>Reste</th><th>DatesD</th><th>Dates de remboursement</th></tr>";
+                    echo"<table id='Customers'><tr><th>identifiant</th><th>Type </th><th>Valeur Dette</th><th>Montant PayE</th><th>Reste</th><th>DatesD</th><th>Motifs</th><th>Dates de remboursement</th></tr>";
                     while($row= mysqli_fetch_assoc($result)){
-                            echo"<tr><td>".$row["idDette"]."</td><td>".$row["TypeD"]."</td><td>".$row["ValeurDette"]."</td><td>".$row["MontantPaye"]."</td><td>".$row["Reste"]."</td><td>".$row["DatesD"]."</td><td>".$row["DatesRNew"]."</td></tr>"; 
+                            echo"<tr><td>".$row["idDette"]."</td><td>".$row["TypeD"]."</td><td>".$row["ValeurDette"]."</td><td>".$row["MontantPaye"]."</td><td>".$row["Reste"]."</td><td>".$row["DatesD"]."</td><td>".$row["il_pris_quoi"]."</td><td>".$row["DatesRNew"]."</td></tr>"; 
                     }
                     echo"</table>";
                 }else{echo "Une erreur s est produite ";}

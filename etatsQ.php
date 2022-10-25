@@ -31,6 +31,9 @@
         #date1{
             display: none;
         }
+        #formulaire2RF{
+            display: none;
+        }
         p{
             color:aquamarine;
         }
@@ -180,6 +183,8 @@
         </div>
         <button id="voirContratClient" class="btn btn-primary" onclick="completeurClientC('Voir le contrat du client')">Voir le contrat du client</button>
         <button id="voirContratClient" class="btn btn-primary" onclick="completeurClientCJ('Voir le contrat du client entre 2 dates')">Voir le contrat des clients entre 2 dates</button>
+        <button id="comp" class="btn btn-primary" onclick="completeurRF('resume Final');">Resume</button>   
+
         
     </div>
 
@@ -221,6 +226,20 @@
             </div>
         </form>
         </div>
+        <!-- les nouveau -->
+        <div id="resumeFinal">
+        <form method= "POST" action="<?php echo htmlspecialchars("journeeResume.php");?>" >
+            <div id="formulaire2RF" style="margin: 10% 10px;">
+        
+                <p id="commentaireRF"></p><br>
+                <input type="date" name="DatesF21"  required><br>
+                <input type="date" name="DatesF22"  required><br>
+                <input type="hidden" name = "Envoie" id="EnvoieRF">
+                <input type="submit" value="Soumettre" id="soumettre">
+            </div>
+        </form>
+        </div>
+        <!-- fin des nouveau pour le resume du jour -->
 
         <div id="date22">
         <form method= "POST" action="<?php echo htmlspecialchars("traitementsQQ.php");?>" >
@@ -420,11 +439,11 @@
                 <button id="detteMateriel" onclick="completeur2('Dette de l entreprise pris en materiel  2')">Materiel</button>
                 <button id="detteArgent" onclick="completeur2('Dette de l entreprise pris en argent  2')">Argent</button>
                 <button id="detteEntreprise" onclick="completeur2('Dette de l entreprise 2')">Toutes</button>
-            
+           
             </div>
    
         </div>
-
+        
         <div class="dropdown">
             <button class="dropbtn btn btn-primary">Modification des factures</button>
             <div class="dropdown-content">
@@ -462,6 +481,7 @@
             document.getElementById("contratOp").style.display = "none";
             document.getElementById("rechercheC").style.display = "none";
             document.getElementById("rechercheCJ").style.display = "none";
+            document.getElementById("formulaire2RF").style.display = "none";
         }
 
         function completeur11(var1)
@@ -496,7 +516,10 @@
            document.getElementById("contratOp").style.display = "none";
            document.getElementById("rechercheC").style.display = "none";
            document.getElementById("rechercheCJ").style.display = "none";
+           document.getElementById("formulaire2RF").style.display = "none";
         }
+
+        
 
         function completeur22(var1)
         {
@@ -513,7 +536,7 @@
            document.getElementById("contratOp").style.display = "none";
            document.getElementById("rechercheC").style.display = "none";
            document.getElementById("rechercheCJ").style.display = "none";
-
+           document.getElementById("formulaire2RF").style.display = "none";
         }
 
         function completeurClient(var1)
@@ -531,6 +554,7 @@
            document.getElementById("paieOp").style.display = "none";
            document.getElementById("contratOp").style.display = "none";
            document.getElementById("rechercheCJ").style.display = "none";
+           document.getElementById("formulaire2RF").style.display = "none";
         }
 
         function completeurClientC(var1)
@@ -548,6 +572,7 @@
            document.getElementById("paieOp").style.display = "none";
            document.getElementById("contratOp").style.display = "none";
            document.getElementById("rechercheCJ").style.display = "none";
+           document.getElementById("formulaire2RF").style.display = "none";
         }
 
         function completeurClientCJ(var1)
@@ -565,6 +590,7 @@
            document.getElementById("approvOp").style.display = "none";
            document.getElementById("paieOp").style.display = "none";
            document.getElementById("contratOp").style.display = "none";
+           document.getElementById("formulaire2RF").style.display = "none";
         }
      
         function completeEnvoi(){
@@ -611,6 +637,7 @@
            document.getElementById("paieOp").style.display = "none";
            document.getElementById("contratOp").style.display = "none";
            document.getElementById("rechercheC").style.display = "none";
+           document.getElementById("formulaire2RF").style.display = "none";
         }
 
         
@@ -636,6 +663,7 @@
            document.getElementById("date11").style.display = "none";
            document.getElementById("rechercheC").style.display = "none";
            document.getElementById("paieOp").style.display = "none";
+           document.getElementById("resumeFinal").style.display = "none";
         }
 
         function testeVideP(){
@@ -665,6 +693,7 @@
            document.getElementById("date11").style.display = "none";
            document.getElementById("approvOp").style.display = "none";
            document.getElementById("rechercheC").style.display = "none";
+           document.getElementById("formulaire2RF").style.display = "none";
          
         }
         function contratOp(){
@@ -678,6 +707,7 @@
            document.getElementById("paieOp").style.display = "none";
            document.getElementById("venteOp").style.display = "none";
            document.getElementById("rechercheC").style.display = "none";
+           document.getElementById("resumeFinal").style.display = "none";
         }
         function testeVideC(){
             if(document.getElementById("OperaNomC").value != ""){
@@ -690,6 +720,23 @@
         function effaceRapideC(){
             document.getElementById("OperaNomC").value = "";
             document.getElementById("operationC").value = "";
+        }
+
+        function completeurRF(var1){
+            document.getElementById("commentaireRF").innerHTML ="Mettez les date a laquelle vous voulez voir  "+var1;
+           // document.getElementById("Envoie2RF").value = var1;
+           document.getElementById("date1").style.display = "none";
+           document.getElementById("recherche").style.display = "none";
+           document.getElementById("date2").style.display = "none";
+           document.getElementById("date22").style.display = "none";
+           document.getElementById("date11").style.display = "none";
+           document.getElementById("venteOp").style.display = "none";
+           document.getElementById("approvOp").style.display = "none";
+           document.getElementById("paieOp").style.display = "none";
+           document.getElementById("contratOp").style.display = "none";
+           document.getElementById("rechercheC").style.display = "none";
+           document.getElementById("rechercheCJ").style.display = "none";
+           document.getElementById("formulaire2RF").style.display = "block";
         }
 
     </script>

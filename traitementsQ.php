@@ -125,14 +125,7 @@
                 }
                 echo"</table>";
                 echo"<p style = 'color : green;'> Montant total de vente : ".$montantTot." USD </p><br><br>";
-               /* echo"<table id='Customers'><tr><th>identi</th><th>Type </th><th>Montant </th><th>Motif </th><th>DatesD</th></tr>";
-                while($row= mysqli_fetch_assoc($result)){
-
-                    echo"<tr><td>".$row["idSortie"]."</td><td>".$row["TypeD"]."</td><td>".$row["Montant"]."</td><td>".$row["il_pris_quoi"]."</td><td>".$row["DatesD"]."</td></tr>"; 
-                    $montantTot += $row["Montant"];
-                }
-                echo"</table>";
-                echo"<p> Montant total sortie : ".$montantTot." USD </p>";*/
+               
             }else{echo "Table vide ... ";}
 
             if(mysqli_num_rows($result2)>0){
@@ -155,15 +148,7 @@
                     echo"<tr><td>".$row2["Nom"]."</td><td>".$nombre."</td><td>".$row2["QuantiteStock"]."</td></tr>";
                 }
                 echo"</table>";
-                //echo"<p style = 'color : green;'> Montant total de vente : ".$montantTot." USD </p>";
-               /* echo"<table id='Customers'><tr><th>identi</th><th>Type </th><th>Montant </th><th>Motif </th><th>DatesD</th></tr>";
-                while($row= mysqli_fetch_assoc($result)){
-
-                   echo"<tr><td>".$row["idSortie"]."</td><td>".$row["TypeD"]."</td><td>".$row["Montant"]."</td><td>".$row["il_pris_quoi"]."</td><td>".$row["DatesD"]."</td></tr>"; 
-                    $montantTot += $row["Montant"];
-                }
-                echo"</table>";
-                echo"<p> Montant total sortie : ".$montantTot." USD </p>";*/
+                
             }else{echo "Table vide ... ";}
         }
 
